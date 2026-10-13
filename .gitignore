@@ -1,0 +1,55 @@
+# Downloaded packages, recovery images, generated EFI and machine-specific data
+/opencore-work/
+/build/
+/dist/
+/tools/
+/downloads/
+/cache/
+/EFI/
+/com.apple.recovery.boot/
+/Preparation-backup/
+
+# Disk images and download archives
+*.dmg
+*.chunklist
+*.iso
+*.img
+*.raw
+*.qcow2
+*.vdi
+*.vmdk
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.tar.xz
+*.tar.bz2
+
+# Compiled bootloader, drivers and ACPI (keep source .dsl fixtures)
+*.efi
+*.aml
+*.kext/
+
+# Generated device identities
+private-identities.json
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local logs, temporary files and OS metadata
+*.log
+*.part
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db

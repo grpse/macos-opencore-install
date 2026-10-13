@@ -1,0 +1,31 @@
+NEXT BOOT: INSTALL BIG SUR ON THE KINGSTON SSD
+
+Chosen destination: KINGSTON SUV300S37A120G, approximately 120 GB (111.8 GiB).
+Erasing it removes Ubuntu and ALL files on that SSD. Copy anything you want
+to keep to a separate disk before starting. The boot-files backup below is
+not a backup of your personal files.
+
+1. Connect the charger, Ethernet, SanDisk installer and a USB mouse.
+2. Save your work and restart. Repeatedly press F12 (or Fn+F12) at the
+   Lenovo logo. Select the SanDisk / EFI USB Device in UEFI mode.
+3. At the OpenCore menu select macOS Base System (External), or the
+   recovery/installer entry. Press Space if it is hidden.
+4. In recovery, open Disk Utility and choose View > Show All Devices.
+5. Select the physical KINGSTON SSD by its model and capacity.
+   Choose Erase: name Macintosh HD, format APFS, scheme GUID Partition Map.
+   Do not erase the SanDisk OPENCORE installer.
+6. Quit Disk Utility. Choose Reinstall macOS Big Sur and select Macintosh HD.
+7. Leave Ethernet, charger and installer connected. At each restart boot
+   through the USB's OpenCore; choose macOS Installer on the Kingston SSD
+   while installation continues, then Macintosh HD when it is ready.
+8. Complete local-account setup. Keep the USB connected for booting until
+   you copy its working OpenCore EFI to the Kingston EFI partition.
+
+Full post-install instructions are in Preparation-backup/OPENCORE-INSTALL-GUIDE.md.
+This USB currently uses USB 2 only. Use Ethernet and a USB mouse; the I2C
+touchpad, sound and sleep need testing. If boot fails, photograph the final
+verbose lines rather than changing several settings at once.
+
+References:
+https://smartsupport.lenovo.com/in/en/solutions/ht500207
+https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html
